@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row my-5 g-4">
+        @for (cloth of clothes; track $index) {
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem; height:600px">
+                <img [src]="cloth.image" class="card-img-top h-50 " alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{cloth.title.split(" ", 3).join(" ")}}....</h5>
+                    <p class="card-text">{{cloth.description.split(" ", 7).join(" ")}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price : {{cloth.price}}</li>
+                    <li class="list-group-item">Category : {{cloth.category}}</li>
+                    <li class="list-group-item">Rate : {{cloth.rating.rate}} </li>
+                </ul>
+            </div>
+        </div>
+        }
+    </div>
+</div>
